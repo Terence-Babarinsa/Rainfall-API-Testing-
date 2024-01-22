@@ -112,3 +112,7 @@ C:\Users\Terence\Documents\GitHub\rainfallAPI\rainfallAPI\obj\Debug\net6.0\rainf
 C:\Users\Terence\Documents\GitHub\rainfallAPI\rainfallAPI\obj\Debug\net6.0\rainfallAPI.genruntimeconfig.cache
 C:\Users\Terence\Documents\GitHub\rainfallAPI\rainfallAPI\obj\Debug\net6.0\ref\rainfallAPI.dll
 C:\Users\Terence\Documents\GitHub\rainfallAPI\rainfallAPI\bin\Debug\net6.0\nunit.framework.legacy.dll
+C:\Users\Terence\Documents\GitHub\rainfallAPI\rainfallAPI\bin\Debug\net6.0\RestSharp.dll
+C:\Users\Terence\Documents\GitHub\rainfallAPI\rainfallAPI\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+C:\Users\Terence\Documents\GitHub\rainfallAPI\rainfallAPI\bin\Debug\net6.0\System.Text.Json.dll
+C:\Users\Terence\Documents\GitHub\rainfallAPI\rainfallAPI\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
