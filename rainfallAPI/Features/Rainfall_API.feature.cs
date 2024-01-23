@@ -94,8 +94,8 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 8
- testRunner.Given("the api end point \"http://environment.data.gov.uk/flood-monitoring/id/stations/21" +
-                        "65\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("the api end point \"https://environment.data.gov.uk/flood-monitoring/id/stations/2" +
+                        "165/readings?_sorted&_limit=10\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 9
  testRunner.When("i make a get request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
