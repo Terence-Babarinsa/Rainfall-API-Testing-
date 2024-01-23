@@ -17,17 +17,7 @@ namespace rainfallAPI.StepDefinitions
     public class Rainfall_APIStepDefinitions
     {
         private string apiEndPOint;
-        HttpResponseMessage apiResponse;
-        HttpClient client;
-        private string responseBody;
         int statusCode;
-
-        private readonly ISpecFlowOutputHelper _outputHelper;
-        public Rainfall_APIStepDefinitions(ISpecFlowOutputHelper outputHelper)
-        {
-           HttpClient client = new HttpClient();
-            this._outputHelper = outputHelper;
-        }
 
         [Given(@"the api end point ""([^""]*)""")]
         public void GivenTheApiEndPoint(string endpoiint)
@@ -38,22 +28,20 @@ namespace rainfallAPI.StepDefinitions
         [When(@"i make a get request")]
         public async void WhenIMakeAGetRequest()
         {
-            apiResponse = await client.GetAsync(apiEndPOint);
-            apiResponse.EnsureSuccessStatusCode();
-            responseBody = await apiResponse.Content.ReadAsStringAsync();
-            _outputHelper.WriteLine(responseBody);
+            var client = new RestClient(apiEndPOint);
+            var request = new RestRequest("");
+            var response = client.Get(request);
+            statusCode = (int)response.StatusCode;
 
-
-
-            var jsonData = JsonConvert.DeserializeObject<DataModel>(apiResponse.ToString());
-            Console.WriteLine(jsonData.ToString());
+            //var jsonData = JsonConvert.DeserializeObject<DataModel>(apiResponse.ToString());
+            //Console.WriteLine(jsonData.ToString());
         }
 
         [Then(@"the reponse status code should be (.*)")]
         public void ThenTheReponseStatusCodeShouldBe(int code)
         {
-            // Assert.That(statusCode, Is.EqualTo(code));
-            throw new PendingStepException();
+            Assert.That(statusCode, Is.EqualTo(code));
+      
         }
 
 
