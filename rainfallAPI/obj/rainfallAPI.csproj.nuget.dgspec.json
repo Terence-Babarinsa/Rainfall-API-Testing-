@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Terence\\Documents\\GitHub\\rainfallAPI\\rainfallAPI\\rainfallAPI.csproj": {}
+    "C:\\Users\\Terence\\Documents\\GitHub\\Rainfall-API-Testing-\\rainfallAPI\\rainfallAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Terence\\Documents\\GitHub\\rainfallAPI\\rainfallAPI\\rainfallAPI.csproj": {
+    "C:\\Users\\Terence\\Documents\\GitHub\\Rainfall-API-Testing-\\rainfallAPI\\rainfallAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Terence\\Documents\\GitHub\\rainfallAPI\\rainfallAPI\\rainfallAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Terence\\Documents\\GitHub\\Rainfall-API-Testing-\\rainfallAPI\\rainfallAPI.csproj",
         "projectName": "rainfallAPI",
-        "projectPath": "C:\\Users\\Terence\\Documents\\GitHub\\rainfallAPI\\rainfallAPI\\rainfallAPI.csproj",
+        "projectPath": "C:\\Users\\Terence\\Documents\\GitHub\\Rainfall-API-Testing-\\rainfallAPI\\rainfallAPI.csproj",
         "packagesPath": "C:\\Users\\Terence\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Terence\\Documents\\GitHub\\rainfallAPI\\rainfallAPI\\obj\\",
+        "outputPath": "C:\\Users\\Terence\\Documents\\GitHub\\Rainfall-API-Testing-\\rainfallAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Terence\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -55,6 +55,10 @@
             "NUnit3TestAdapter": {
               "target": "Package",
               "version": "[4.5.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "RestSharp": {
               "target": "Package",

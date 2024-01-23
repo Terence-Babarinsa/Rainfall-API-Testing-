@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("rainfallAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3981e6f41b8ce004fd5e9a30d1775f12d000cd05")]
 [assembly: System.Reflection.AssemblyProductAttribute("rainfallAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("rainfallAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
