@@ -21,10 +21,4 @@
     <Folder Include="Drivers\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <SpecFlowFeatureFiles Include="C:\Users\Terence\Documents\GitHub\Rainfall-API-Testing-\Rainfall_API.feature">
-      <Link>Rainfall_API.feature</Link>
-    </SpecFlowFeatureFiles>
-  </ItemGroup>
-
 </Project>
