@@ -6,9 +6,10 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using rainfallAPI.Support;
+using rainfallAPI;
 using Newtonsoft.Json.Linq;
 using TechTalk.SpecFlow.Infrastructure;
+using rainfallAPI.DataHandling;
 
 
 namespace rainfallAPI.StepDefinitions
@@ -28,14 +29,19 @@ namespace rainfallAPI.StepDefinitions
         [When(@"i make a get request")]
         public void WhenIMakeAGetRequest()
         {
-            //sending GET request with RestSharp
+            //sending GET request tp api endpoint
             var client = new RestClient(apiEndPOint);
             var request = new RestRequest("");
             var response = client.Get(request);
-            //taking response code and coverting to integer
-            statusCode = (int)response.StatusCode;
 
-           //var jsonData = JsonConvert.DeserializeObject<DataModel>(response.ToString());
+            //deserialisinig json into datamodel
+            Rootobject jsonData = JsonConvert.DeserializeObject<Rootobject>(response.Content.ToString());
+
+            //extracting data from json
+            Console.WriteLine($"test 1{jsonData.items[0].value}");
+
+            //assigning status code to variable for testing 
+            statusCode = (int)response.StatusCode;
         }
 
         [Then(@"the reponse status code should be (.*)")]
