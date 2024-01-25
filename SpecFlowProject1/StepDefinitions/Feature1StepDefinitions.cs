@@ -12,10 +12,15 @@ namespace SpecFlowProject1.StepDefinitions
     [Binding]
     public class Feature1StepDefinitions
     {
-        private string apiEndpoint;
-        int statusCode;
-        Rootobject jsonData;
-        private GET_Request getReqeust = new GET_Request();
+        public  string apiEndpoint { get; set; }
+       public  int statusCode { get; set; }
+        public Rootobject jsonData { get; set; }
+        private GET_Request getReqeust {  get; set; }
+
+        public Feature1StepDefinitions()
+        {
+            getReqeust = new GET_Request();
+        }
 
         [Given(@"the api end point ""([^""]*)""")]
         public void GivenTheApiEndPoint(string endpoint)
@@ -31,9 +36,6 @@ namespace SpecFlowProject1.StepDefinitions
             //deserialisinig json into datamodel
             jsonData = JsonConvert.DeserializeObject<Rootobject>(response.Content.ToString());
 
-            //extracting data from json
-            Console.WriteLine($"test 1 {jsonData.items[0].value}");
-
             //assigning status code to variable for testing 
             return statusCode = (int)response.StatusCode;
         }
@@ -41,8 +43,7 @@ namespace SpecFlowProject1.StepDefinitions
         [Then(@"the reponse status code should be (.*)")]
         public void ThenTheReponseStatusCodeShouldBe(int code)
         {
-            //asserting response code to prove connection has been made to api
-            //Assert.That(statusCode, Is.EqualTo(code));
+            //
         }
         [Then(@"the date of the measurement is ""([^""]*)""")]
         public string ThenTheDateOfTheMeasurementIs(string date)
@@ -57,12 +58,7 @@ namespace SpecFlowProject1.StepDefinitions
         [Then(@"there are (.*) rainfall measurements")]
         public int ThenThereAreRainfallMeasurements(int measurementCount)
         {
-            int count = 0;
-            //cycles through each item in json file
-            foreach (var item in jsonData.items)
-            {
-                count++;
-            }
+            int count = jsonData.items.Count();
 
             return count;
         }
