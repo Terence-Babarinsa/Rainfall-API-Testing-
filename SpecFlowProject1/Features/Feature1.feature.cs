@@ -35,7 +35,7 @@ namespace SpecFlowProject1.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Feature1", "A short summary of the feature", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Feature1", "This feature tests the new functionality added to the Rainfall api", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -94,7 +94,7 @@ this.ScenarioInitialize(scenarioInfo);
                 this.ScenarioStart();
 #line 7
  testRunner.Given("the api end point \"https://environment.data.gov.uk/flood-monitoring/id/stations/2" +
-                        "165/readings?date=2023-12-26&_limit=10\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+                        "165/readings?date=2023-12-29&_limit=10\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 8
  testRunner.When("i make a get request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -103,7 +103,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("the reponse status code should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 10
- testRunner.And("the date of the measurement is \"2023-12-26\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the date of the measurement is \"2023-12-29\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 11
  testRunner.And("there are 10 rainfall measurements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
