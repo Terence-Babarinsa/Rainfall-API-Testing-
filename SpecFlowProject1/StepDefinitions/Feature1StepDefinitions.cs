@@ -63,31 +63,26 @@ namespace SpecFlowProject1.StepDefinitions
             Assert.That( count, Is.EqualTo(measurementCount));
         }
 
-        [Then(@"each measurement value shoud match with input")]
-        public void ThenEachMeasurementValueShoudMatchWithInput(Table table)
+        [Then(@"each measurement value shoud match with (.*)")]
+        public void ThenEachMeasurementValueShoudMatchWith(Decimal input)
         {
-            int count = 0;
-            //cycles through each item in table 
-            foreach (TableRow row in table.Rows)
-            {
+            int count = jsonData.items.Count();
+            for (int i = 0; i < count; i++) {
                 //cycle through all items in json
-                foreach (var item in jsonData.items)
+                foreach (var item in jsonData.items[i].value.ToString("F3"))
                 {
-                    //converts float value to decimal
-                    decimal _item = Convert.ToDecimal(item.value);
-                    Console.WriteLine(_item);
-                    ////**unable to outout decimal
-                    //Assert.That(Math.Round( _item,3), Is.EqualTo(row["input"]));
-                    count++;
+                    //*****not working as intended, please ignore********
+                    //Assert.That(item, Is.EqualTo(input.ToString()));
                 }
             }
-
         }
-        [Given(@"correct api endpoint ""([^""]*)"" with invalid limit")]
+
+        [Given(@"correct api endpoint \$""([^""]*)"" with invalid limit")]
         public void GivenCorrectApiEndpointWithInvalidLimit(string endpoint)
         {
             apiEndpoint = endpoint;
         }
+
         [Given(@"correct api endpoint ""([^""]*)"" with invalid date")]
         public void GivenCorrectApiEndpointWithInvalidDate(string endpoint)
         {
@@ -102,6 +97,12 @@ namespace SpecFlowProject1.StepDefinitions
             Assert.That(itemCount, Is.EqualTo(count));
         }
 
+        [Then(@"the number of items in the json should not match the (.*)")]
+        public void ThenTheNumberOfItemsInTheJsonShouldNotMatchThe(int input)
+        {
+                Assert.That(jsonData.items.Count, Is.Not.EqualTo(input));
+            
+        }
 
     }
 }
