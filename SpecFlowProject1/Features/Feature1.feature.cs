@@ -175,11 +175,27 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Correct Data")]
         [NUnit.Framework.CategoryAttribute("Positive_test")]
-        public void CorrectData()
+        [NUnit.Framework.TestCaseAttribute("3.373", null)]
+        [NUnit.Framework.TestCaseAttribute("3.376", null)]
+        [NUnit.Framework.TestCaseAttribute("3.375", null)]
+        [NUnit.Framework.TestCaseAttribute("3.382", null)]
+        [NUnit.Framework.TestCaseAttribute("3.386", null)]
+        [NUnit.Framework.TestCaseAttribute("3.386", null)]
+        [NUnit.Framework.TestCaseAttribute("3.399", null)]
+        [NUnit.Framework.TestCaseAttribute("3.398", null)]
+        [NUnit.Framework.TestCaseAttribute("3.403", null)]
+        [NUnit.Framework.TestCaseAttribute("3.409", null)]
+        public void CorrectData(string input, string[] exampleTags)
         {
-            string[] tagsOfScenario = new string[] {
+            string[] @__tags = new string[] {
                     "Positive_test"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("input", input);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Correct Data", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 25
 this.ScenarioInitialize(scenarioInfo);
@@ -198,30 +214,8 @@ this.ScenarioInitialize(scenarioInfo);
 #line 27
  testRunner.When("i make a get request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                            "input"});
-                table1.AddRow(new string[] {
-                            "3.409"});
-                table1.AddRow(new string[] {
-                            "3.403"});
-                table1.AddRow(new string[] {
-                            "3.398"});
-                table1.AddRow(new string[] {
-                            "3.399"});
-                table1.AddRow(new string[] {
-                            "3.386"});
-                table1.AddRow(new string[] {
-                            "3.386"});
-                table1.AddRow(new string[] {
-                            "3.382"});
-                table1.AddRow(new string[] {
-                            "3.375"});
-                table1.AddRow(new string[] {
-                            "3.376"});
-                table1.AddRow(new string[] {
-                            "3.373"});
 #line 28
- testRunner.Then("each measurement value shoud match with input", ((string)(null)), table1, "Then ");
+ testRunner.Then(string.Format("each measurement value shoud match with {0}", input), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -230,13 +224,21 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Limit out of scope")]
         [NUnit.Framework.CategoryAttribute("Negative_test")]
-        public void LimitOutOfScope()
+        [NUnit.Framework.TestCaseAttribute("5000", null)]
+        [NUnit.Framework.TestCaseAttribute("-1", null)]
+        public void LimitOutOfScope(string input, string[] exampleTags)
         {
-            string[] tagsOfScenario = new string[] {
+            string[] @__tags = new string[] {
                     "Negative_test"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("input", input);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Limit out of scope", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 42
+#line 44
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -246,15 +248,15 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 43
- testRunner.Given("correct api endpoint \"https://environment.data.gov.uk/flood-monitoring/id/station" +
-                        "s/2165/readings?date=2025-01-10&_limit=10\" with invalid limit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 45
+ testRunner.Given(string.Format("correct api endpoint $\"https://environment.data.gov.uk/flood-monitoring/id/statio" +
+                            "ns/2165/readings?date=2025-01-10&_limit={0}\" with invalid limit", input), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 44
+#line 46
  testRunner.When("i make a get request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 45
- testRunner.Then("there should be 0 items in the json", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 47
+ testRunner.Then(string.Format("the number of items in the json should not match the {0}", input), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -269,7 +271,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "Negative_test"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Date out of scope", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 48
+#line 56
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -279,14 +281,14 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 49
+#line 57
  testRunner.Given("correct api endpoint \"https://environment.data.gov.uk/flood-monitoring/id/station" +
                         "s/2165/readings?date=2025-01-10&_limit=10\" with invalid date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 50
+#line 58
  testRunner.When("i make a get request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 51
+#line 59
  testRunner.Then("there should be 0 items in the json", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
