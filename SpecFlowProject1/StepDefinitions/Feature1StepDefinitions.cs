@@ -1,5 +1,6 @@
 using Newtonsoft.Json;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 using RestSharp;
 using SpecFlowProject1.HttpManager;
 using SpecFlowProject1.Support;
@@ -67,14 +68,17 @@ namespace SpecFlowProject1.StepDefinitions
         public void ThenEachMeasurementValueShoudMatchWith(Decimal input)
         {
             int count = jsonData.items.Count();
-            for (int i = 0; i < count; i++) {
-                //cycle through all items in json
-                foreach (var item in jsonData.items[i].value.ToString("F3"))
-                {
-                    //*****not working as intended, please ignore********
-                    //Assert.That(item, Is.EqualTo(input.ToString()));
-                }
+
+            //sort incoming list
+
+            //cycle through all items in json
+            for (int i = 0; i > count; i++)
+            {
+                //*****not working as intended, please ignore********
+                //Assert.That((item.ToString() ,Is.EqualTo( input.ToString()));
+                ClassicAssert.AreEqual((decimal)jsonData.items[i].value, input);
             }
+
         }
 
         [Given(@"correct api endpoint \$""([^""]*)"" with invalid limit")]
