@@ -74,14 +74,14 @@ namespace SpecFlowProject1.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Test")]
-        [NUnit.Framework.CategoryAttribute("tag1")]
-        public void Test()
+        [NUnit.Framework.DescriptionAttribute("Correct Status Code")]
+        [NUnit.Framework.CategoryAttribute("Positive_test")]
+        public void CorrectStatusCode()
         {
             string[] tagsOfScenario = new string[] {
-                    "tag1"};
+                    "Positive_test"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Test", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Correct Status Code", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 6
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -94,7 +94,7 @@ this.ScenarioInitialize(scenarioInfo);
                 this.ScenarioStart();
 #line 7
  testRunner.Given("the api end point \"https://environment.data.gov.uk/flood-monitoring/id/stations/2" +
-                        "165/readings?date=2023-12-29&_limit=10\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+                        "165/readings?date=2024-01-10&_limit=10\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 8
  testRunner.When("i make a get request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -102,36 +102,192 @@ this.ScenarioInitialize(scenarioInfo);
 #line 9
  testRunner.Then("the reponse status code should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 10
- testRunner.And("the date of the measurement is \"2023-12-29\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Correct date")]
+        [NUnit.Framework.CategoryAttribute("Positive_test")]
+        public void CorrectDate()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "Positive_test"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Correct date", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 12
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
-#line 11
- testRunner.And("there are 10 rainfall measurements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 13
+ testRunner.Given("the api end point \"https://environment.data.gov.uk/flood-monitoring/id/stations/2" +
+                        "165/readings?date=2024-01-10&_limit=10\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 14
+ testRunner.When("i make a get request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 15
+ testRunner.Then("the date of the measurement is \"2024-01-10\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Correct Limit")]
+        [NUnit.Framework.CategoryAttribute("Positive_test")]
+        public void CorrectLimit()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "Positive_test"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Correct Limit", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 19
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 20
+ testRunner.Given("the api end point \"https://environment.data.gov.uk/flood-monitoring/id/stations/2" +
+                        "165/readings?date=2024-01-10&_limit=10\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 21
+ testRunner.When("i make a get request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 22
+ testRunner.Then("there are 10 rainfall measurements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Correct Data")]
+        [NUnit.Framework.CategoryAttribute("Positive_test")]
+        public void CorrectData()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "Positive_test"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Correct Data", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 25
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 26
+ testRunner.Given("the api end point \"https://environment.data.gov.uk/flood-monitoring/id/stations/2" +
+                        "165/readings?date=2024-01-10&_limit=10\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 27
+ testRunner.When("i make a get request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
                 TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                             "input"});
                 table1.AddRow(new string[] {
-                            "1.826"});
+                            "3.409"});
                 table1.AddRow(new string[] {
-                            "1.816"});
+                            "3.403"});
                 table1.AddRow(new string[] {
-                            "1.803"});
+                            "3.398"});
                 table1.AddRow(new string[] {
-                            "1.792"});
+                            "3.399"});
                 table1.AddRow(new string[] {
-                            "1.788"});
+                            "3.386"});
                 table1.AddRow(new string[] {
-                            "1.777"});
+                            "3.386"});
                 table1.AddRow(new string[] {
-                            "1.768"});
+                            "3.382"});
                 table1.AddRow(new string[] {
-                            "1.766"});
+                            "3.375"});
                 table1.AddRow(new string[] {
-                            "1.762"});
+                            "3.376"});
                 table1.AddRow(new string[] {
-                            "1.753"});
-#line 12
- testRunner.And("each measurement value shoud match with input", ((string)(null)), table1, "And ");
+                            "3.373"});
+#line 28
+ testRunner.Then("each measurement value shoud match with input", ((string)(null)), table1, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Limit out of scope")]
+        [NUnit.Framework.CategoryAttribute("Negative_test")]
+        public void LimitOutOfScope()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "Negative_test"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Limit out of scope", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 42
+ this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 43
+ testRunner.Given("correct api endpoint \"https://environment.data.gov.uk/flood-monitoring/id/station" +
+                        "s/2165/readings?date=2025-01-10&_limit=10\" with invalid limit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 44
+ testRunner.When("i make a get request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 45
+ testRunner.Then("there should be 0 items in the json", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Date out of scope")]
+        [NUnit.Framework.CategoryAttribute("Negative_test")]
+        public void DateOutOfScope()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "Negative_test"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Date out of scope", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 48
+ this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 49
+ testRunner.Given("correct api endpoint \"https://environment.data.gov.uk/flood-monitoring/id/station" +
+                        "s/2165/readings?date=2025-01-10&_limit=10\" with invalid date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 50
+ testRunner.When("i make a get request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 51
+ testRunner.Then("there should be 0 items in the json", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

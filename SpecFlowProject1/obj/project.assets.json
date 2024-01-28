@@ -5772,11 +5772,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Terence\\Documents\\GitHub\\SpecFlowProject1\\SpecFlowProject1\\SpecFlowProject1.csproj",
+      "projectUniqueName": "C:\\Users\\Terence\\Documents\\GitHub\\Rainfall-API-Testing-\\SpecFlowProject1\\SpecFlowProject1.csproj",
       "projectName": "SpecFlowProject1",
-      "projectPath": "C:\\Users\\Terence\\Documents\\GitHub\\SpecFlowProject1\\SpecFlowProject1\\SpecFlowProject1.csproj",
+      "projectPath": "C:\\Users\\Terence\\Documents\\GitHub\\Rainfall-API-Testing-\\SpecFlowProject1\\SpecFlowProject1.csproj",
       "packagesPath": "C:\\Users\\Terence\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Terence\\Documents\\GitHub\\SpecFlowProject1\\SpecFlowProject1\\obj\\",
+      "outputPath": "C:\\Users\\Terence\\Documents\\GitHub\\Rainfall-API-Testing-\\SpecFlowProject1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Terence\\AppData\\Roaming\\NuGet\\NuGet.Config",
